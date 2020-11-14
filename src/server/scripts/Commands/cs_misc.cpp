@@ -1624,7 +1624,7 @@ public:
 #if TRINITY_ENDIAN == BIGENDIAN
                 EndianConvertReverse(ip);
 #endif
-
+                /*
                 PreparedStatement* stmt = WorldDatabase.GetPreparedStatement(WORLD_SEL_IP2NATION_COUNTRY);
 
                 stmt->setUInt32(0, ip);
@@ -1637,7 +1637,7 @@ public:
                     lastIp.append(" (");
                     lastIp.append(fields2[0].GetString());
                     lastIp.append(")");
-                }
+                }*/
             }
             else
             {

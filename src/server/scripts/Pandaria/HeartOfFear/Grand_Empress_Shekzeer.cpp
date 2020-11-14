@@ -692,8 +692,7 @@ public:
 		}
 		void Reset()
 		{
-			target_after = false;
-			target_after = NULL;
+			target_after = nullptr;
 		}
 
 		void UpdateAI(const uint32 diff)

@@ -515,7 +515,7 @@ class Map : public GridRefManager<NGridType>
             if (x > MAX_NUMBER_OF_GRIDS && y > MAX_NUMBER_OF_GRIDS)
             {
                 sLog->outError(LOG_FILTER_GENERAL, "CRASH::map::setNGrid() Invalid grid coordinates found: %d, %d!", x, y);
-                return false;
+                return nullptr;
             }
             return i_grids[x][y];
         }

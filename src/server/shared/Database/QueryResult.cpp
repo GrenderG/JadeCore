@@ -75,7 +75,11 @@ m_length(NULL)
         memset(m_rBind[i].buffer, 0, size);
         m_rBind[i].buffer_length = size;
         m_rBind[i].length = &m_length[i];
+        #if MYSQL_VERSION_ID >= 80000
+        m_rBind[i].is_null = reinterpret_cast<bool *>(&m_isNull[i]);
+        #else
         m_rBind[i].is_null = &m_isNull[i];
+        #endif
         m_rBind[i].error = NULL;
         m_rBind[i].is_unsigned = field->flags & UNSIGNED_FLAG;
 
